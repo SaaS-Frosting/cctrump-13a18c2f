@@ -1,12 +1,25 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Navbar } from '@/components/cafe/Navbar';
+import { Hero } from '@/components/cafe/Hero';
+import { About } from '@/components/cafe/About';
+import { StickerPacks } from '@/components/cafe/StickerPacks';
+import { ExperienceBox } from '@/components/cafe/ExperienceBox';
+import { Benefits } from '@/components/cafe/Benefits';
+import { Events } from '@/components/cafe/Events';
+import { Moodboard } from '@/components/cafe/Moodboard';
+import { Footer } from '@/components/cafe/Footer';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="bg-background min-h-screen text-foreground">
+      <Navbar />
+      <Hero />
+      <About />
+      <StickerPacks />
+      <ExperienceBox />
+      <Benefits />
+      <Events />
+      <Moodboard />
+      <Footer />
     </div>
   );
 };
