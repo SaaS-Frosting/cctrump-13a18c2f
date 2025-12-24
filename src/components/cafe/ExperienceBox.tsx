@@ -1,4 +1,5 @@
 import { Badge } from './Badge';
+import experienceBoxImg from '@/assets/experience-box.jpg';
 
 export const ExperienceBox = () => (
   <section id="drop" className="py-16 md:py-24 px-6 md:px-12 bg-neutral-900">
@@ -10,7 +11,7 @@ export const ExperienceBox = () => (
            </div>
            
            <img 
-             src="https://www.halconpackaging.com/uploads/750X750/Coffee-Boxes/Coffee-Boxes.jpg?v1.1" 
+             src={experienceBoxImg} 
              alt="Coffee Experience Box - Edición Limitada" 
              className="w-full h-full object-cover opacity-90 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700 grayscale-[0.2] group-hover:grayscale-0"
            />

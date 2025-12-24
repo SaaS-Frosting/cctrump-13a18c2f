@@ -1,6 +1,8 @@
 import { Skull } from 'lucide-react';
 import { SectionTitle } from './SectionTitle';
 import { Badge } from './Badge';
+import packOrigen from '@/assets/pack-origen.png';
+import packTrustNoDecaf from '@/assets/pack-trust-no-decaf.jpg';
 
 const WHATSAPP_URL = "https://chat.whatsapp.com/JLePjv21vMjLhhXPQL7s6l";
 
@@ -11,7 +13,8 @@ const packs = [
     desc: "El inicio de todo. Diseños originales que iniciaron la comunidad.",
     soldOut: true,
     tag: "Sold Out",
-    tagColor: "red" as const
+    tagColor: "red" as const,
+    image: packOrigen
   },
   { 
     name: "Pack Trust no Decaf", 
@@ -19,7 +22,8 @@ const packs = [
     desc: "Nuevos diseños más moteros y con más cafeína.",
     soldOut: false,
     tag: "Nuevo Drop",
-    tagColor: "amber" as const
+    tagColor: "amber" as const,
+    image: packTrustNoDecaf
   },
   { 
     name: "Pack Box", 
@@ -28,7 +32,8 @@ const packs = [
     soldOut: true,
     isExclusive: true,
     tag: "Exclusivo Box",
-    tagColor: "amber" as const
+    tagColor: "amber" as const,
+    image: null
   },
 ];
 
@@ -43,8 +48,18 @@ export const StickerPacks = () => (
       {packs.map((pack, idx) => (
         <div key={idx} className={`bg-neutral-900 rounded-xl overflow-hidden border transition-all group ${pack.soldOut && !pack.isExclusive ? 'border-border opacity-80' : 'border-border hover:border-stone-600'}`}>
           <div className="h-48 bg-neutral-800 relative flex items-center justify-center overflow-hidden">
-             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-stone-700 to-neutral-900 opacity-50"></div>
-             <Skull className={`text-stone-600 opacity-20 transition-transform duration-500 ${!pack.soldOut && 'group-hover:scale-110'}`} size={120} />
+             {pack.image ? (
+               <img 
+                 src={pack.image} 
+                 alt={pack.name} 
+                 className={`w-full h-full object-cover transition-transform duration-500 ${!pack.soldOut && 'group-hover:scale-110'}`}
+               />
+             ) : (
+               <>
+                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-stone-700 to-neutral-900 opacity-50"></div>
+                 <Skull className="text-stone-600 opacity-20" size={120} />
+               </>
+             )}
              
              {pack.soldOut && !pack.isExclusive && (
                 <div className="absolute inset-0 bg-background/60 flex items-center justify-center z-10">

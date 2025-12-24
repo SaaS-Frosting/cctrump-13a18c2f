@@ -1,5 +1,6 @@
-import { Zap, ChevronRight, Instagram, Bike, Coffee, Skull } from 'lucide-react';
+import { Zap, ChevronRight, Instagram } from 'lucide-react';
 import { Button } from './Button';
+import heroCoffee from '@/assets/hero-coffee.png';
 
 const INSTAGRAM_URL = "https://www.instagram.com/cafeconmoto/";
 const WHATSAPP_URL = "https://chat.whatsapp.com/JLePjv21vMjLhhXPQL7s6l";
@@ -34,24 +35,13 @@ export const Hero = () => (
 
       <div className="relative group">
         <div className="absolute -inset-1 bg-glow-gradient rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-        <div className="relative bg-neutral-900 border border-border rounded-2xl p-6 md:p-10 flex flex-col items-center justify-center min-h-[400px] gap-6 overflow-hidden">
-          <div className="absolute top-0 right-0 p-8 opacity-10 rotate-12">
-            <Bike size={200} className="text-stone-100" />
-          </div>
-          <div className="absolute bottom-0 left-0 p-8 opacity-10 -rotate-12">
-            <Coffee size={200} className="text-stone-100" />
-          </div>
-          
-          <div className="z-10 text-center space-y-4">
-            <div className="w-48 h-48 bg-neutral-800 rounded-full mx-auto border-4 border-dashed border-stone-700 flex items-center justify-center relative animate-float">
-               <Skull size={64} className="text-stone-300" />
-               <div className="absolute -bottom-4 bg-red-800 text-primary-foreground text-xs font-bold px-3 py-1 rounded-full uppercase">
-                 Riders Only
-               </div>
-            </div>
-            <h3 className="text-2xl font-bold text-stone-200 uppercase font-serif italic">Café con Moto</h3>
-            <p className="text-stone-500 text-sm">Experience Boxes & Merch</p>
-          </div>
+        <div className="relative bg-neutral-900 border border-border rounded-2xl overflow-hidden min-h-[400px]">
+          <img 
+            src={heroCoffee} 
+            alt="Café de especialidad - Café con Moto" 
+            className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-700"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/80 via-neutral-900/20 to-transparent pointer-events-none"></div>
         </div>
       </div>
     </div>
