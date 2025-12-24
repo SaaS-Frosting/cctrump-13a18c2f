@@ -1,6 +1,8 @@
-import { Coffee, Zap, Camera, ArrowRight } from 'lucide-react';
+import { Coffee, Zap, ArrowRight } from 'lucide-react';
 import { SectionTitle } from './SectionTitle';
 import { Button } from './Button';
+import tallerCataImg from '@/assets/taller-cata.png';
+import masterclassCafeImg from '@/assets/masterclass-cafe.png';
 
 const WHATSAPP_URL = "https://chat.whatsapp.com/JLePjv21vMjLhhXPQL7s6l";
 
@@ -8,12 +10,14 @@ const pastEvents = [
   { 
     title: "Taller de Cata", 
     desc: "Nuestra primera experiencia sensorial. Probamos cafesazos de distintos orígenes en un taller práctico mientras conversamos y nos conocímos",
-    icon: Coffee 
+    icon: Coffee,
+    image: tallerCataImg
   },
   { 
     title: "Masterclass de Café", 
     desc: "Un especialista nos guió por el mundo del café de especialidad mientras degustábamos diferentes métodos de extracción.",
-    icon: Zap 
+    icon: Zap,
+    image: masterclassCafeImg
   }
 ];
 
@@ -28,12 +32,14 @@ export const Events = () => (
       {pastEvents.map((evt, idx) => (
         <div key={idx} className="group relative bg-neutral-950 rounded-xl overflow-hidden border border-border hover:border-amber-900 transition-all duration-300">
           <div className="h-64 bg-neutral-900 relative flex items-center justify-center overflow-hidden">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-neutral-800 to-background opacity-60"></div>
-            <evt.icon size={120} className="text-stone-700 absolute -right-4 -bottom-4 rotate-12 group-hover:scale-110 transition-transform duration-500" />
-            
-            <div className="relative z-10 flex flex-col items-center gap-2">
-              <Camera size={32} className="text-stone-500 mb-2 opacity-80" />
-              <span className="text-xs font-bold uppercase tracking-widest text-stone-500 border border-stone-700 px-3 py-1 rounded">
+            <img 
+              src={evt.image} 
+              alt={evt.title} 
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-900/30 to-transparent pointer-events-none"></div>
+            <div className="absolute top-4 right-4 z-10">
+              <span className="text-xs font-bold uppercase tracking-widest text-stone-300 bg-background/80 backdrop-blur-sm border border-stone-700 px-3 py-1 rounded">
                 Evento Pasado
               </span>
             </div>
