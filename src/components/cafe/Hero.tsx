@@ -4,6 +4,8 @@ import heroCoffee from '@/assets/hero-coffee.png';
 
 const INSTAGRAM_URL = "https://www.instagram.com/cafeconmoto/";
 const WHATSAPP_URL = "https://chat.whatsapp.com/JLePjv21vMjLhhXPQL7s6l";
+const YOUTUBE_URL = "https://www.youtube.com/@cafeconmoto";
+const TIKTOK_URL = "https://www.tiktok.com/@cafeconmoto";
 
 export const Hero = () => (
   <section id="hero" className="relative min-h-screen flex items-center pt-20 bg-neutral-950">
@@ -15,22 +17,21 @@ export const Hero = () => (
         <div className="inline-flex items-center gap-2 text-amber-500 font-bold tracking-widest text-xs uppercase animate-pulse-slow">
           <Zap size={14} /> Est. 2019 · Lima, Perú
         </div>
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-display uppercase text-stone-100 leading-[0.9] tracking-tighter">
-          Alta <span className="text-gradient">Cafeína.</span> <br />
-          Alto <span className="text-red-700">Octanaje.</span>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display uppercase text-stone-100 leading-[1.1] tracking-tighter">
+          El lugar donde se cruzan las motos, el café y la comunidad.
         </h1>
-        <p className="text-lg md:text-xl text-stone-400 max-w-lg mx-auto md:mx-0 font-serif leading-relaxed">
-          La comunidad definitiva para quienes viven entre el espresso perfecto y el rugido del motor.
+        <p className="text-xl md:text-2xl text-stone-300 max-w-lg mx-auto md:mx-0 font-serif leading-relaxed italic">
+          Acá rodamos juntos.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-          <Button variant="primary" icon={ChevronRight} onClick={() => window.open(WHATSAPP_URL, '_blank')}>Únete a WhatsApp</Button>
-          <Button variant="secondary" icon={Instagram} onClick={() => window.open(INSTAGRAM_URL, '_blank')}>Ver Instagram</Button>
+        <div className="flex flex-col gap-4">
+          <Button variant="primary" icon={ChevronRight} onClick={() => window.open(WHATSAPP_URL, '_blank')}>Únete a la comunidad</Button>
+          <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+            <Button variant="secondary" onClick={() => window.open(YOUTUBE_URL, '_blank')}>Ver YouTube</Button>
+            <Button variant="secondary" icon={Instagram} onClick={() => window.open(INSTAGRAM_URL, '_blank')}>Seguir en Instagram</Button>
+            <Button variant="secondary" onClick={() => window.open(TIKTOK_URL, '_blank')}>Seguir en TikTok</Button>
+          </div>
         </div>
-        
-        <p className="text-xs text-stone-600 pt-4 font-mono">
-          // Riders & Coffee Lovers united.
-        </p>
       </div>
 
       <div className="relative group">
