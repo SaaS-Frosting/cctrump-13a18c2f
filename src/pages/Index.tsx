@@ -5,7 +5,6 @@ import { StickerPacks } from '@/components/cafe/StickerPacks';
 import { ExperienceBox } from '@/components/cafe/ExperienceBox';
 import { Benefits } from '@/components/cafe/Benefits';
 import { Events } from '@/components/cafe/Events';
-import { Moodboard } from '@/components/cafe/Moodboard';
 import { Footer } from '@/components/cafe/Footer';
 
 const Index = () => {
@@ -18,7 +17,6 @@ const Index = () => {
       <ExperienceBox />
       <Benefits />
       <Events />
-      <Moodboard />
       <Footer />
     </div>
   );

@@ -1,4 +1,4 @@
-import { Skull, Instagram } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 import { Button } from './Button';
 
 const INSTAGRAM_URL = "https://www.instagram.com/cafeconmoto/";
@@ -9,7 +9,7 @@ export const Footer = () => (
     <div className="container mx-auto px-6 flex flex-col items-center text-center">
       <div className="mb-8">
         <h2 className="text-4xl md:text-6xl font-display uppercase text-stone-100 mb-6">
-          Únete al ride
+          Únete a la Comunidad
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto mb-8">
           Invitaciones a rodadas, drops exclusivos y descuentos. Todo pasa primero por el grupo.
@@ -27,7 +27,7 @@ export const Footer = () => (
 
       <div className="flex flex-col md:flex-row justify-between items-center w-full text-muted-foreground text-sm">
         <div className="flex items-center gap-2 mb-4 md:mb-0">
-          <Skull size={16} /> Café con Moto © 2025
+          Café con Moto © 2026
         </div>
         <div className="flex gap-6">
           <a href="#" className="hover:text-stone-400">Términos y Condiciones</a>
