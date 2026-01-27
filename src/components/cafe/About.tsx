@@ -4,7 +4,7 @@ import { SectionTitle } from './SectionTitle';
 const cards = [
   {
     icon: MessageCircle,
-    title: "Conversaciones",
+    title: "Conversaciones y Experiencias",
     desc: "Intercambia ideas, experiencias y recomendaciones con la comunidad."
   },
   {

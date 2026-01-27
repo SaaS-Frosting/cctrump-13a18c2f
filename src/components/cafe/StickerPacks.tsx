@@ -8,7 +8,7 @@ const WHATSAPP_URL = "https://chat.whatsapp.com/JLePjv21vMjLhhXPQL7s6l";
 
 const packs = [
   { 
-    name: "Pack Origen", 
+    name: "Sticker Pack", 
     price: "S/ 19.00", 
     desc: "El inicio de todo. Diseños originales que iniciaron la comunidad.",
     soldOut: true,
@@ -17,7 +17,7 @@ const packs = [
     image: packOrigen
   },
   { 
-    name: "Pack Trust no Decaf", 
+    name: "Experience Box", 
     price: "S/ 15.00", 
     desc: "Nuevos diseños más moteros y con más cafeína.",
     soldOut: false,
@@ -26,7 +26,7 @@ const packs = [
     image: packTrustNoDecaf
   },
   { 
-    name: "Pack Box", 
+    name: "HandMade", 
     price: null,
     desc: "Diseños exclusivos sólo para los que lograron comprar un Box.",
     soldOut: true,

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Skull, Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from './Button';
 
 const WHATSAPP_URL = "https://chat.whatsapp.com/JLePjv21vMjLhhXPQL7s6l";
@@ -7,8 +7,7 @@ const WHATSAPP_URL = "https://chat.whatsapp.com/JLePjv21vMjLhhXPQL7s6l";
 const navLinks = [
   { name: "Inicio", href: "#hero" },
   { name: "Qué es", href: "#about" },
-  { name: "Merch", href: "#stickers" },
-  { name: "Boxes", href: "#drop" },
+  { name: "Productos", href: "#stickers" },
   { name: "Beneficios", href: "#benefits" },
 ];
 
@@ -23,10 +22,7 @@ export const Navbar = () => {
   return (
     <nav className="fixed top-0 w-full z-50 bg-neutral-950/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#" className="flex items-center gap-2 group">
-          <div className="bg-stone-100 text-background p-1 rounded-sm rotate-3 group-hover:rotate-0 transition-transform">
-            <Skull size={20} strokeWidth={2.5} />
-          </div>
+        <a href="#" className="flex items-center group">
           <span className="text-xl font-display uppercase tracking-tighter text-stone-100">
             Café<span className="text-red-600">Con</span>Moto
           </span>
@@ -42,7 +38,6 @@ export const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <Button variant="nav" icon={ArrowRight} onClick={handleJoinClick}>Unirme</Button>
         </div>
 
         <button className="md:hidden text-stone-100" onClick={() => setIsOpen(!isOpen)}>
