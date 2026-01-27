@@ -44,7 +44,7 @@ export const StickerPacks = () => (
   <section id="stickers" className="py-16 md:py-24 px-6 md:px-12 bg-neutral-950 border-t border-border">
     <SectionTitle 
       title="Merch Oficial" 
-      subtitle="Sticker packs con calaveras, cascos y cafeína para donde se te ocurra."
+      subtitle="Merch con calaveras, cascos y cafeína para donde se te ocurra."
     />
 
     <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
