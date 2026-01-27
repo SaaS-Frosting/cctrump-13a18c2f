@@ -70,7 +70,7 @@ export const StickerPacks = () => (
                 </div>
              )}
              
-             {pack.tag && !pack.soldOut && (
+             {pack.tag && !pack.soldOut && !pack.isExclusive && (
                <div className="absolute top-4 right-4">
                   <Badge color={pack.tagColor}>{pack.tag}</Badge>
                </div>
@@ -78,7 +78,7 @@ export const StickerPacks = () => (
 
               {pack.isExclusive && (
                <div className="absolute top-4 right-4">
-                  <Badge color="amber">Solo en Box</Badge>
+                  <Badge color="amber">Nuevo Lanzamiento</Badge>
                </div>
              )}
           </div>
