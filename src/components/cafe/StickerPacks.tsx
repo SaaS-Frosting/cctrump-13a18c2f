@@ -15,7 +15,7 @@ const packs = [
     tag: "Disponible",
     tagColor: "amber" as const,
     image: packOrigen,
-    buttonText: "Quiero este producto"
+    buttonText: "Quiero Stickers"
   },
   { 
     name: "Experience Box", 
