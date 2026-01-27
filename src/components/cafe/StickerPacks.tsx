@@ -4,36 +4,39 @@ import { Badge } from './Badge';
 import packOrigen from '@/assets/pack-origen.png';
 import packTrustNoDecaf from '@/assets/pack-trust-no-decaf.jpg';
 
-const WHATSAPP_URL = "https://chat.whatsapp.com/JLePjv21vMjLhhXPQL7s6l";
+const WHATSAPP_CONTACT = "https://wa.me/51961789492/";
 
 const packs = [
   { 
     name: "Sticker Pack", 
-    price: "S/ 19.00", 
+    price: "S/ 15.00", 
     desc: "El inicio de todo. Diseños originales que iniciaron la comunidad.",
-    soldOut: true,
-    tag: "Sold Out",
-    tagColor: "red" as const,
-    image: packOrigen
+    soldOut: false,
+    tag: "Disponible",
+    tagColor: "amber" as const,
+    image: packOrigen,
+    buttonText: "Quiero este producto"
   },
   { 
     name: "Experience Box", 
-    price: "S/ 15.00", 
-    desc: "Nuevos diseños más moteros y con más cafeína.",
-    soldOut: false,
-    tag: "Nuevo Drop",
-    tagColor: "amber" as const,
-    image: packTrustNoDecaf
+    price: "S/ 80.00", 
+    desc: "Seis latas con café de seis cafeterías distintas de Lima y Cusco, seleccionados personalmente.",
+    soldOut: true,
+    tag: "Sold Out",
+    tagColor: "red" as const,
+    image: packTrustNoDecaf,
+    buttonText: "Agotado"
   },
   { 
     name: "HandMade", 
     price: null,
-    desc: "Diseños exclusivos sólo para los que lograron comprar un Box.",
-    soldOut: true,
+    desc: "Accesorios de cuero hechos a mano para moteros. Piezas únicas y exclusivas.",
+    soldOut: false,
     isExclusive: true,
-    tag: "Exclusivo Box",
+    tag: "Exclusivo",
     tagColor: "amber" as const,
-    image: null
+    image: null,
+    buttonText: "Quiero comprar"
   },
 ];
 
@@ -87,13 +90,13 @@ export const StickerPacks = () => (
                 {pack.price ? pack.price : "Exclusivo"}
               </span>
               
-              {pack.soldOut || pack.isExclusive ? (
+              {pack.soldOut ? (
                  <button disabled className="text-xs font-bold text-stone-500 border border-stone-700 px-3 py-2 rounded uppercase tracking-wider cursor-not-allowed">
-                   {pack.isExclusive ? "Solo en Box" : "Agotado"}
+                   Agotado
                  </button>
               ) : (
-                <button className="text-xs font-bold text-stone-300 border border-stone-600 px-3 py-2 rounded hover:bg-muted uppercase tracking-wider" onClick={() => window.open(WHATSAPP_URL, '_blank')}>
-                  Quiero este pack
+                <button className="text-xs font-bold text-stone-300 border border-stone-600 px-3 py-2 rounded hover:bg-muted uppercase tracking-wider" onClick={() => window.open(WHATSAPP_CONTACT, '_blank')}>
+                  {pack.buttonText}
                 </button>
               )}
             </div>

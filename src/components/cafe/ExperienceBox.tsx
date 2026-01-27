@@ -46,16 +46,12 @@ export const ExperienceBox = () => (
             <p className="text-stone-300 font-bold mb-4 text-sm uppercase">
               Se agotó rápido. No te pierdas el próximo:
             </p>
-            <div className="flex gap-2">
-              <input 
-                type="email" 
-                placeholder="Tu email de piloto..." 
-                className="bg-neutral-950 border border-border text-stone-200 px-4 py-3 rounded-md w-full focus:outline-none focus:border-red-700 placeholder:text-stone-600"
-              />
-              <button className="bg-stone-200 text-background font-bold px-6 py-3 rounded-md hover:bg-stone-100 whitespace-nowrap transition-colors">
-                Avísame
-              </button>
-            </div>
+            <button 
+              onClick={() => window.open('https://wa.me/51961789492/', '_blank')}
+              className="bg-stone-200 text-background font-bold px-6 py-3 rounded-md hover:bg-stone-100 transition-colors w-full uppercase tracking-wider"
+            >
+              Apuntarme para el próximo
+            </button>
           </div>
         </div>
       </div>
