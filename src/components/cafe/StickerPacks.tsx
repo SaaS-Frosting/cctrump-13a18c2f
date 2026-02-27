@@ -3,6 +3,7 @@ import { SectionTitle } from './SectionTitle';
 import { Badge } from './Badge';
 import packOrigen from '@/assets/pack-origen.png';
 import experienceBoxV1 from '@/assets/experience-box-v1.jpg';
+import handmadeImg from '@/assets/handmade.png';
 
 const WHATSAPP_CONTACT = "https://wa.me/51961789492/";
 
@@ -35,7 +36,7 @@ const packs = [
     isExclusive: true,
     tag: "Exclusivo",
     tagColor: "amber" as const,
-    image: null,
+    image: handmadeImg,
     buttonText: "Quiero comprar"
   },
 ];
