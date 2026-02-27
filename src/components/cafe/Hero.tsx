@@ -36,7 +36,7 @@ export const Hero = () => (
 
       <div className="relative group">
         <div className="absolute -inset-1 bg-glow-gradient rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-        <div className="relative bg-neutral-900 border border-border rounded-2xl overflow-hidden min-h-[400px]">
+        <div className="relative bg-neutral-900 border border-border rounded-2xl overflow-hidden aspect-[4/5]">
           <img 
             src={heroCoffee} 
             alt="Café de especialidad - Café con Moto" 
