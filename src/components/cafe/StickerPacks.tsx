@@ -2,7 +2,7 @@ import { Skull } from 'lucide-react';
 import { SectionTitle } from './SectionTitle';
 import { Badge } from './Badge';
 import packOrigen from '@/assets/pack-origen.png';
-import packTrustNoDecaf from '@/assets/pack-trust-no-decaf.jpg';
+import experienceBoxV1 from '@/assets/experience-box-v1.jpg';
 
 const WHATSAPP_CONTACT = "https://wa.me/51961789492/";
 
@@ -18,13 +18,13 @@ const packs = [
     buttonText: "Quiero Stickers"
   },
   { 
-    name: "Experience Box", 
-    price: "S/ 80.00", 
+    name: "Experience Box Vol. 01", 
+    price: "S/ 85.00", 
     desc: "Seis latas con café de seis cafeterías distintas de Lima y Cusco, seleccionados personalmente.",
     soldOut: true,
     tag: "Sold Out",
     tagColor: "red" as const,
-    image: packTrustNoDecaf,
+    image: experienceBoxV1,
     buttonText: "Agotado"
   },
   { 
