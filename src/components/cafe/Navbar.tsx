@@ -5,10 +5,9 @@ import { Button } from './Button';
 const WHATSAPP_URL = "https://chat.whatsapp.com/JLePjv21vMjLhhXPQL7s6l";
 
 const navLinks = [
-  { name: "Inicio", href: "#hero" },
-  { name: "Qué es", href: "#about" },
-  { name: "Productos", href: "#stickers" },
-  { name: "Beneficios", href: "#benefits" },
+  { name: "Rodadas", href: "#events" },
+  { name: "Café", href: "#about" },
+  { name: "Merch", href: "#stickers" },
 ];
 
 export const Navbar = () => {
